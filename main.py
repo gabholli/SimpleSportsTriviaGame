@@ -35,15 +35,13 @@ if __name__ == '__main__':
     print("")
 
 
-    multipleChoices("What number equals one?", "One", "Two", "Three", "Four")
+    multipleChoices("What MLB team has the record for most runs in a game(modern era)?", "Texas Rangers",
+                    "Chicago Cubs", "Boston Red Sox", "New York Yankees")
     promptValue = inputPrompt()
     sportsTriviaQuestions(promptValue, 1)
-    multipleChoices("What number equals two?", "One", "Two", "Three", "Four")
+    multipleChoices("What is the most popular sport in the world?", "Baseball", "Basketball", "Soccer", "Golf")
     promptValueTwo = inputPrompt()
-    sportsTriviaQuestions(promptValueTwo, 2)
-    multipleChoices("What number equals three?", "One", "Two", "Three", "Four")
+    sportsTriviaQuestions(promptValueTwo, 3)
+    multipleChoices("When were the San Jose Sharks Formed?", "2000", "1991", "1995", "1982")
     promptValueThree = inputPrompt()
-    sportsTriviaQuestions(promptValueThree, 3)
-    multipleChoices("What number equals four?", "One", "Two", "Three", "Four")
-    promptValueFour = inputPrompt()
-    sportsTriviaQuestions(promptValueFour, 4)
+    sportsTriviaQuestions(promptValueThree, 2)
