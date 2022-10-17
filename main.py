@@ -1,10 +1,3 @@
-# This is a sample Python script.
-import string
-
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
 def sportsTriviaQuestions(guess, answer):
     global score
     isGuessing = True
@@ -48,5 +41,6 @@ if __name__ == '__main__':
     multipleChoices("What number equals two?", "One", "Two", "Three", "Four")
     promptValueTwo = inputPrompt()
     sportsTriviaQuestions(promptValueTwo, 2)
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    multipleChoices("What number equals three?", "One", "Two", "Three", "Four")
+    promptValueThree = inputPrompt()
+    sportsTriviaQuestions(promptValueThree, 3)
