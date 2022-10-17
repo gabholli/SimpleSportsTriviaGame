@@ -1,3 +1,4 @@
+
 def sportsTriviaQuestions(guess, answer):
     global score
     isGuessing = True
@@ -11,6 +12,7 @@ def sportsTriviaQuestions(guess, answer):
             break
     print("Your score currently is: " + str(score))
 
+
 def inputPrompt():
     answer = 0
     try:
@@ -19,6 +21,7 @@ def inputPrompt():
         pass
     return answer
 
+
 def multipleChoices(question, a, b, c, d):
     print(question)
     print("1: " + a)
@@ -26,8 +29,10 @@ def multipleChoices(question, a, b, c, d):
     print("3: " + c)
     print("4: " + d)
 
-# Press the green button in the gutter to run the script.
+
 if __name__ == '__main__':
+
+
     score = 0
     print("Welcome To The Sports Trivia Game!")
     print("----------------------------------")
