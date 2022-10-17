@@ -53,3 +53,5 @@ if __name__ == '__main__':
     sports_trivia_questions(promptValueThree, 2)
     print("Your final score is " + str(score) + "!")
     database.add_db_row(name_entered, score)
+    database.retrieve_high_scores_with_names()
+

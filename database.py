@@ -55,3 +55,24 @@ def add_db_row(name, score):
     with connection:
         score = (name, score)
         create_score_query(connection, score)
+
+
+def retrieve_high_scores_query(connection):
+    sql = ''' SELECT name, score FROM scores 
+              WHERE score = (SELECT MAX(score) FROM scores);'''
+    current = connection.cursor()
+    current.execute(sql)
+    records = current.fetchall()
+    print("Current High Scores")
+    print("-------------------")
+    for row in records:
+        print("Name = ", row[0])
+        print("Score = ", row[1])
+
+
+def retrieve_high_scores_with_names():
+    database = 'scores.db'
+
+    connection = create_connection(database)
+    with connection:
+        retrieve_high_scores_query(connection)
