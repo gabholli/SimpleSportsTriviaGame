@@ -48,7 +48,7 @@ if __name__ == '__main__':
     multiple_choices("What is the most popular sport in the world?", "Baseball", "Basketball", "Soccer", "Golf")
     promptValueTwo = input_prompt()
     sports_trivia_questions(promptValueTwo, 3)
-    multiple_choices("When were the San Jose Sharks Formed?", "2000", "1991", "1995", "1982")
+    multiple_choices("When were the San Jose Sharks formed?", "2000", "1991", "1995", "1982")
     promptValueThree = input_prompt()
     sports_trivia_questions(promptValueThree, 2)
     print("Your final score is " + str(score) + "!")
