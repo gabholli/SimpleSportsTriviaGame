@@ -11,6 +11,7 @@ def sportsTriviaQuestions(guess, answer):
             print("Incorrect Answer!")
             break
     print("Your score currently is: " + str(score))
+    print("")
 
 
 def inputPrompt():
