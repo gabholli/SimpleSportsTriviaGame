@@ -45,3 +45,4 @@ if __name__ == '__main__':
     multipleChoices("When were the San Jose Sharks Formed?", "2000", "1991", "1995", "1982")
     promptValueThree = inputPrompt()
     sportsTriviaQuestions(promptValueThree, 2)
+    print("Your final score is " + str(score) + "!")
