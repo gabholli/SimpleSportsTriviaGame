@@ -34,6 +34,7 @@ def multiple_choices(question, a, b, c, d):
 
 
 if __name__ == '__main__':
+    name_entered = input("Please Enter Your Name: ")
     database.create_table_queries()
     score = 0
     print("Welcome To The Sports Trivia Game!")
@@ -51,3 +52,4 @@ if __name__ == '__main__':
     promptValueThree = input_prompt()
     sports_trivia_questions(promptValueThree, 2)
     print("Your final score is " + str(score) + "!")
+    database.add_db_row(name_entered, score)

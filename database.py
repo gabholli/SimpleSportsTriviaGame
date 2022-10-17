@@ -46,3 +46,12 @@ def create_score_query(connection, score):
     current.execute(sql, score)
     connection.commit()
     return current.lastrowid
+
+
+def add_db_row(name, score):
+    database = 'scores.db'
+
+    connection = create_connection(database)
+    with connection:
+        score = (name, score)
+        create_score_query(connection, score)
