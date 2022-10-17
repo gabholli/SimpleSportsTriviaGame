@@ -44,3 +44,6 @@ if __name__ == '__main__':
     multipleChoices("What number equals three?", "One", "Two", "Three", "Four")
     promptValueThree = inputPrompt()
     sportsTriviaQuestions(promptValueThree, 3)
+    multipleChoices("What number equals four?", "One", "Two", "Three", "Four")
+    promptValueFour = inputPrompt()
+    sportsTriviaQuestions(promptValueFour, 4)
