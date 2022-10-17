@@ -58,7 +58,7 @@ def add_db_row(name, score):
 
 
 def retrieve_high_scores_query(connection):
-    sql = ''' SELECT name, score FROM scores 
+    sql = ''' SELECT DISTINCT name, score FROM scores 
               WHERE score = (SELECT MAX(score) FROM scores);'''
     current = connection.cursor()
     current.execute(sql)

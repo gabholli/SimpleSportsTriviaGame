@@ -33,6 +33,21 @@ def multiple_choices(question, a, b, c, d):
     print("4: " + d)
 
 
+def list_of_questions():
+    multiple_choices("What MLB team has the record for most runs in a game(modern era)?", "Texas Rangers",
+                     "Chicago Cubs", "Boston Red Sox", "New York Yankees")
+    prompt_value = input_prompt()
+    sports_trivia_questions(prompt_value, 1)
+
+    multiple_choices("What is the most popular sport in the world?", "Baseball", "Basketball", "Soccer", "Golf")
+    prompt_value_two = input_prompt()
+    sports_trivia_questions(prompt_value_two, 3)
+
+    multiple_choices("When were the San Jose Sharks formed?", "2000", "1991", "1995", "1982")
+    prompt_value_three = input_prompt()
+    sports_trivia_questions(prompt_value_three, 2)
+
+
 if __name__ == '__main__':
     name_entered = input("Please Enter Your Name: ")
     database.create_table_queries()
@@ -40,18 +55,9 @@ if __name__ == '__main__':
     print("Welcome To The Sports Trivia Game!")
     print("----------------------------------")
 
+    list_of_questions()
+
     print("")
-    multiple_choices("What MLB team has the record for most runs in a game(modern era)?", "Texas Rangers",
-                     "Chicago Cubs", "Boston Red Sox", "New York Yankees")
-    promptValue = input_prompt()
-    sports_trivia_questions(promptValue, 1)
-    multiple_choices("What is the most popular sport in the world?", "Baseball", "Basketball", "Soccer", "Golf")
-    promptValueTwo = input_prompt()
-    sports_trivia_questions(promptValueTwo, 3)
-    multiple_choices("When were the San Jose Sharks formed?", "2000", "1991", "1995", "1982")
-    promptValueThree = input_prompt()
-    sports_trivia_questions(promptValueThree, 2)
     print("Your final score is " + str(score) + "!")
     database.add_db_row(name_entered, score)
     database.retrieve_high_scores_with_names()
-
