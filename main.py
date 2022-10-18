@@ -61,3 +61,5 @@ if __name__ == '__main__':
     print("Your final score is " + str(score) + "!")
     database.add_db_row(name_entered, score)
     database.retrieve_high_scores_with_names()
+    print("")
+    input("Press Enter to close window:")
