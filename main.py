@@ -12,6 +12,7 @@ def sports_trivia_questions(guess, answer):
         else:
             print("Incorrect Answer!")
             break
+    print("")
     print("Your score currently is: " + str(score))
     print("")
 
@@ -57,9 +58,9 @@ if __name__ == '__main__':
 
     list_of_questions()
 
-    print("")
     print("Your final score is " + str(score) + "!")
-    database.add_db_row(name_entered, score)
-    database.retrieve_high_scores_with_names()
     print("")
+    database.add_db_row(name_entered, score)
+    database.retrieve_current_high_score_by_name(name_entered)
+    database.retrieve_high_scores_with_names()
     input("Press Enter to close window:")

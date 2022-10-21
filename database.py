@@ -63,11 +63,12 @@ def retrieve_high_scores_query(connection):
     current = connection.cursor()
     current.execute(sql)
     records = current.fetchall()
-    print("Current High Scores")
+    print("Overall High Scores")
     print("-------------------")
     for row in records:
         print("Name = ", row[0])
         print("Score = ", row[1])
+        print("")
 
 
 def retrieve_high_scores_with_names():
@@ -76,3 +77,24 @@ def retrieve_high_scores_with_names():
     connection = create_connection(database)
     with connection:
         retrieve_high_scores_query(connection)
+
+
+def retrieve_current_high_score_by_name_query(connection, name):
+    sql = ''' SELECT MAX(score) from scores WHERE name = ?; '''
+    current = connection.cursor()
+    current.execute(sql, (name, ))
+    records = current.fetchall()
+    print("Your Current High Score")
+    print("-----------------------")
+    for row in records:
+        print("Name = ", name)
+        print("Score = ", row[0])
+    print("")
+
+
+def retrieve_current_high_score_by_name(name):
+    database = 'scores.db'
+
+    connection = create_connection(database)
+    with connection:
+        retrieve_current_high_score_by_name_query(connection, name)
