@@ -49,18 +49,42 @@ def list_of_questions():
     sports_trivia_questions(prompt_value_three, 2)
 
 
+def replay_prompt():
+    yes_answer = "Y"
+    no_answer = "N"
+    while True:
+        exit_prompt = input("Do you want to play again: Y or N: ")
+        if exit_prompt == yes_answer:
+            return yes_answer
+        elif exit_prompt == no_answer:
+            return no_answer
+        elif exit_prompt != yes_answer or exit_prompt != no_answer:
+            print("")
+            print("Please make a valid entry")
+            print("")
+            continue
+
+
 if __name__ == '__main__':
-    name_entered = input("Please Enter Your Name: ")
-    database.create_table_queries()
-    score = 0
-    print("Welcome To The Sports Trivia Game!")
-    print("----------------------------------")
+    while True:
+        name_entered = input("Please Enter Your Name: ")
+        database.create_table_queries()
+        score = 0
+        print("Welcome To The Sports Trivia Game!")
+        print("----------------------------------")
 
-    list_of_questions()
+        list_of_questions()
 
-    print("Your final score is " + str(score) + "!")
-    print("")
-    database.add_db_row(name_entered, score)
-    database.retrieve_current_high_score_by_name(name_entered)
-    database.retrieve_high_scores_with_names()
-    input("Press Enter to close window:")
+        print("Your final score is " + str(score) + "!")
+        print("")
+        database.add_db_row(name_entered, score)
+        database.retrieve_current_high_score_by_name(name_entered)
+        database.retrieve_high_scores_with_names()
+        exit_answer = replay_prompt()
+        if exit_answer == "Y":
+            continue
+        elif exit_answer == "N":
+            print("")
+            print("Thank you for playing!")
+            input("Press Enter to close window:")
+            break
