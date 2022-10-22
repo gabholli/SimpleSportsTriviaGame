@@ -48,13 +48,15 @@ def list_of_questions():
     prompt_value_three = input_prompt()
     sports_trivia_questions(prompt_value_three, 2)
 
-    multiple_choices("Which of these years did the Houston Astros win the World Series?", "2005", "2017", "2000", "2020")
+    multiple_choices("Which of these years did the Houston Astros win the World Series?",
+                     "2005", "2017", "2000", "2020")
     prompt_value_four = input_prompt()
     sports_trivia_questions(prompt_value_four, 2)
 
     multiple_choices("How many Super Bowls have the Texans won?", "One", "Five", "Two", "Zero")
     prompt_value_five = input_prompt()
     sports_trivia_questions(prompt_value_five, 4)
+
 
 def replay_prompt():
     yes_answer = "Y"
@@ -70,7 +72,6 @@ def replay_prompt():
             print("Please make a valid entry")
             print("")
             continue
-
 
 
 if __name__ == '__main__':
