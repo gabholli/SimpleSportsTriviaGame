@@ -114,9 +114,11 @@ if __name__ == '__main__':
         database.retrieve_high_scores_with_names()
         exit_answer = replay_prompt()
         if exit_answer == "Y":
+            print("")
             continue
         elif exit_answer == "N":
             print("")
             print("Thank you for playing!")
+            print("")
             input("Press Enter to close window:")
             break
