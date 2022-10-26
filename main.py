@@ -1,3 +1,5 @@
+import random
+
 import database
 
 
@@ -26,8 +28,7 @@ def input_prompt():
     return answer
 
 
-def multiple_choices(question, a, b, c, d):
-    print(question)
+def multiple_choices(a, b, c, d):
     print("1: " + a)
     print("2: " + b)
     print("3: " + c)
@@ -35,27 +36,49 @@ def multiple_choices(question, a, b, c, d):
 
 
 def list_of_questions():
-    multiple_choices("What MLB team has the record for most runs in a game(modern era)?", "Texas Rangers",
-                     "Chicago Cubs", "Boston Red Sox", "New York Yankees")
-    prompt_value = input_prompt()
-    sports_trivia_questions(prompt_value, 1)
+    questions = [
+        "What MLB team has the record for most runs in a game(modern era)?",
+        "What is the most popular sport in the world?",
+        "When were the San Jose Sharks formed?",
+        "Which of these years did the Houston Astros win the World Series?",
+        "How many Super Bowls have the Texans won?"
+    ]
 
-    multiple_choices("What is the most popular sport in the world?", "Baseball", "Basketball", "Soccer", "Golf")
-    prompt_value_two = input_prompt()
-    sports_trivia_questions(prompt_value_two, 3)
+    random.shuffle(questions)
 
-    multiple_choices("When were the San Jose Sharks formed?", "2000", "1991", "1995", "1982")
-    prompt_value_three = input_prompt()
-    sports_trivia_questions(prompt_value_three, 2)
-
-    multiple_choices("Which of these years did the Houston Astros win the World Series?",
-                     "2005", "2017", "2000", "2020")
-    prompt_value_four = input_prompt()
-    sports_trivia_questions(prompt_value_four, 2)
-
-    multiple_choices("How many Super Bowls have the Texans won?", "One", "Five", "Two", "Zero")
-    prompt_value_five = input_prompt()
-    sports_trivia_questions(prompt_value_five, 4)
+    while len(questions):
+        if questions[0] == "What MLB team has the record for most runs in a game(modern era)?":
+            print("What MLB team has the record for most runs in a game(modern era)?")
+            multiple_choices("Texas Rangers",
+                             "Chicago Cubs", "Boston Red Sox", "New York Yankees")
+            choice = input_prompt()
+            sports_trivia_questions(choice, 1)
+            del questions[0]
+        elif questions[0] == "What is the most popular sport in the world?":
+            print("What is the most popular sport in the world?")
+            multiple_choices("Baseball", "Basketball", "Soccer",
+                             "Golf")
+            choice = input_prompt()
+            sports_trivia_questions(choice, 3)
+            del questions[0]
+        elif questions[0] == "When were the San Jose Sharks formed?":
+            print("When were the San Jose Sharks formed?")
+            multiple_choices("2000", "1991", "1995", "1982")
+            choice = input_prompt()
+            sports_trivia_questions(choice, 2)
+            del questions[0]
+        elif questions[0] == "Which of these years did the Houston Astros win the World Series?":
+            print("Which of these years did the Houston Astros win the World Series?")
+            multiple_choices("2005", "2017", "2000", "2020")
+            choice = input_prompt()
+            sports_trivia_questions(choice, 2)
+            del questions[0]
+        elif questions[0] == "How many Super Bowls have the Texans won?":
+            print("How many Super Bowls have the Texans won?")
+            multiple_choices("One", "Five", "Two", "Zero")
+            choice = input_prompt()
+            sports_trivia_questions(choice, 4)
+            del questions[0]
 
 
 def replay_prompt():
