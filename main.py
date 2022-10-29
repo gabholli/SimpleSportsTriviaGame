@@ -3,7 +3,7 @@ import random
 import database
 
 
-def sports_trivia_questions(guess, answer):
+def sports_trivia_question_format(guess, answer):
     global score
     is_guessing = True
     while is_guessing:
@@ -52,32 +52,32 @@ def list_of_questions():
             multiple_choices("Texas Rangers",
                              "Chicago Cubs", "Boston Red Sox", "New York Yankees")
             choice = input_prompt()
-            sports_trivia_questions(choice, 1)
+            sports_trivia_question_format(choice, 1)
             del questions[0]
         elif questions[0] == "What is the most popular sport in the world?":
             print("What is the most popular sport in the world?")
             multiple_choices("Baseball", "Basketball", "Soccer",
                              "Golf")
             choice = input_prompt()
-            sports_trivia_questions(choice, 3)
+            sports_trivia_question_format(choice, 3)
             del questions[0]
         elif questions[0] == "When were the San Jose Sharks formed?":
             print("When were the San Jose Sharks formed?")
             multiple_choices("2000", "1991", "1995", "1982")
             choice = input_prompt()
-            sports_trivia_questions(choice, 2)
+            sports_trivia_question_format(choice, 2)
             del questions[0]
         elif questions[0] == "Which of these years did the Houston Astros win the World Series?":
             print("Which of these years did the Houston Astros win the World Series?")
             multiple_choices("2005", "2017", "2000", "2020")
             choice = input_prompt()
-            sports_trivia_questions(choice, 2)
+            sports_trivia_question_format(choice, 2)
             del questions[0]
         elif questions[0] == "How many Super Bowls have the Texans won?":
             print("How many Super Bowls have the Texans won?")
             multiple_choices("One", "Five", "Two", "Zero")
             choice = input_prompt()
-            sports_trivia_questions(choice, 4)
+            sports_trivia_question_format(choice, 4)
             del questions[0]
 
 
