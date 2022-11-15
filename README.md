@@ -12,5 +12,5 @@ Two files exist: a main file entitled main.py and a database-handling file calle
 
 To run the program, one can use pyinstaller to create an executable file in Windows(the only OS 
 used so far). If no executable file is created, the program can run in an IDE of choice using
-the pertaing console.
+the pertaining console.
 
