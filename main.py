@@ -20,11 +20,7 @@ def sports_trivia_question_format(guess, answer):
 
 
 def input_prompt():
-    answer = ""
-    try:
-        answer = input("Please type your answer: ")
-    except ValueError:
-        pass
+    answer = input("Please type your answer: ")
     return answer
 
 
@@ -32,9 +28,9 @@ def list_of_questions():
     quiz_questions = [
         ["What MLB team has the record for most runs in a game(modern era)?", "Texas Rangers"],
         ["What is the most popular sport in the world?", "Soccer"],
-        ["When were the San Jose Sharks formed?", "1991"],
+        ["What year were the San Jose Sharks formed?", "1991"],
         ["Did the Houston Astros win the World Series in 2017?", "Yes"],
-        ["What NHL team does Connor McDavid currently play for?", "Edmonton Oilers"]
+        ["What NHL team does Connor McDavid currently play for in 2022?", "Edmonton Oilers"]
     ]
 
     random.shuffle(quiz_questions)
