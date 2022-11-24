@@ -28,13 +28,6 @@ def input_prompt():
     return answer
 
 
-def multiple_choices(a, b, c, d):
-    print("1: " + a)
-    print("2: " + b)
-    print("3: " + c)
-    print("4: " + d)
-
-
 def list_of_questions():
     global score
     quiz_questions = [
@@ -42,9 +35,8 @@ def list_of_questions():
         ["What is the most popular sport in the world?", "Soccer"],
         ["When were the San Jose Sharks formed?", "1991"],
         ["Did the Houston Astros win the World Series in 2017?", "Yes"],
-        ["How many Super Bowls have the Texans won?", "Zero"],
-        ["What NHL team does Connor McDavid currently play for?", "Edmonton Oilers"],
-        ["How often is the World Cup held?", "Every four years"]
+        ["What NHL team does Connor McDavid currently play for?", "Edmonton Oilers"]
+
     ]
 
     random.shuffle(quiz_questions)
@@ -71,7 +63,8 @@ def replay_prompt():
             continue
 
 
-if __name__ == '__main__':
+def run_quiz():
+    global score
     while True:
         name_entered = input("Please Enter Your Name: ")
         database.create_table_queries()
@@ -96,3 +89,8 @@ if __name__ == '__main__':
             print("")
             input("Press Enter to close window:")
             break
+
+
+if __name__ == '__main__':
+    score = 0
+    run_quiz()
