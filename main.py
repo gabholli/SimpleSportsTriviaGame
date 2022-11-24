@@ -20,9 +20,9 @@ def sports_trivia_question_format(guess, answer):
 
 
 def input_prompt():
-    answer = 0
+    answer = ""
     try:
-        answer = int(input("Please select an answer: "))
+        answer = input("Please type your answer: ")
     except ValueError:
         pass
     return answer
@@ -36,70 +36,23 @@ def multiple_choices(a, b, c, d):
 
 
 def list_of_questions():
-    questions = [
-        "What MLB team has the record for most runs in a game(modern era)?",
-        "What is the most popular sport in the world?",
-        "When were the San Jose Sharks formed?",
-        "Which of these years did the Houston Astros win the World Series?",
-        "How many Super Bowls have the Texans won?",
-        "What NHL team does Connor McDavid currently play for?",
-        "How often is the World Cup held?"
+    global score
+    quiz_questions = [
+        ["What MLB team has the record for most runs in a game(modern era)?", "Texas Rangers"],
+        ["What is the most popular sport in the world?", "Soccer"],
+        ["When were the San Jose Sharks formed?", "1991"],
+        ["Did the Houston Astros win the World Series in 2017?", "Yes"],
+        ["How many Super Bowls have the Texans won?", "Zero"],
+        ["What NHL team does Connor McDavid currently play for?", "Edmonton Oilers"],
+        ["How often is the World Cup held?", "Every four years"]
     ]
 
-    random.shuffle(questions)
+    random.shuffle(quiz_questions)
 
-    while len(questions):
-        if questions[0] == "What MLB team has the record for most runs in a game(modern era)?":
-            print(questions[0])
-            multiple_choices("Texas Rangers",
-                             "Chicago Cubs", "Boston Red Sox", "New York Yankees")
-            choice = input_prompt()
-            sports_trivia_question_format(choice, 1)
-            del questions[0]
-        elif questions[0] == "What is the most popular sport in the world?":
-            print(questions[0])
-            multiple_choices("Baseball", "Basketball", "Soccer",
-                             "Golf")
-            choice = input_prompt()
-            sports_trivia_question_format(choice, 3)
-            del questions[0]
-        elif questions[0] == "When were the San Jose Sharks formed?":
-            print(questions[0])
-            multiple_choices("2000", "1991", "1995", "1982")
-            choice = input_prompt()
-            sports_trivia_question_format(choice, 2)
-            del questions[0]
-        elif questions[0] == "Which of these years did the Houston Astros win the World Series?":
-            print(questions[0])
-            multiple_choices("2005", "2017", "2000", "2020")
-            choice = input_prompt()
-            sports_trivia_question_format(choice, 2)
-            del questions[0]
-        elif questions[0] == "How many Super Bowls have the Texans won?":
-            print(questions[0])
-            multiple_choices("One", "Five", "Two", "Zero")
-            choice = input_prompt()
-            sports_trivia_question_format(choice, 4)
-            del questions[0]
-        elif questions[0] == "What NHL team does Connor McDavid currently play for?":
-            print(questions[0])
-            multiple_choices("San Jose Sharks", "Florida Panthers", "Edmonton Oilers", "Huston Nachos")
-            choice = input_prompt()
-            sports_trivia_question_format(choice, 3)
-            del questions[0]
-        elif questions[0] == "What NHL team does Connor McDavid currently play for?":
-            print(questions[0])
-            multiple_choices("San Jose Sharks", "Florida Panthers", "Edmonton Oilers", "Huston Nachos")
-            choice = input_prompt()
-            sports_trivia_question_format(choice, 3)
-            del questions[0]
-        elif questions[0] == "How often is the World Cup held?":
-            print(questions[0])
-            multiple_choices("Every two years", "Every four years", "Every three years", "Every five years")
-            choice = input_prompt()
-            sports_trivia_question_format(choice, 2Logan)
-            del questions[0]
-
+    for i in range(len(quiz_questions)):
+        print(quiz_questions[i][0])
+        choice = input_prompt()
+        sports_trivia_question_format(choice, quiz_questions[i][1])
 
 
 def replay_prompt():
