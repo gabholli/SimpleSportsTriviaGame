@@ -41,7 +41,8 @@ def list_of_questions():
         "What is the most popular sport in the world?",
         "When were the San Jose Sharks formed?",
         "Which of these years did the Houston Astros win the World Series?",
-        "How many Super Bowls have the Texans won?"
+        "How many Super Bowls have the Texans won?",
+        "What NHL team does Connor McDavid currently play for?"
     ]
 
     random.shuffle(questions)
@@ -79,6 +80,13 @@ def list_of_questions():
             choice = input_prompt()
             sports_trivia_question_format(choice, 4)
             del questions[0]
+        elif questions[0] == "What NHL team does Connor McDavid currently play for?":
+            print(questions[0])
+            multiple_choices("San Jose Sharks", "Florida Panthers", "Edmonton Oilers", "Huston Nachos")
+            choice = input_prompt()
+            sports_trivia_question_format(choice, 3)
+            del questions[0]
+
 
 
 def replay_prompt():
