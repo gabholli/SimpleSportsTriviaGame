@@ -30,7 +30,8 @@ def list_of_questions():
         ["What is the most popular sport in the world?", "Soccer"],
         ["In what year were the San Jose Sharks formed?", "1991"],
         ["Did the Houston Astros win the World Series in 2017?", "Yes"],
-        ["What NHL team does Connor McDavid play for in the 2022-2023 season?", "Edmonton Oilers"]
+        ["What NHL team does Connor McDavid play for in the 2022-2023 season?", "Edmonton Oilers"],
+        ["What year was the Chase Center of the Golden State Warriors opened?", "2019"]
     ]
 
     random.shuffle(quiz_questions)
