@@ -29,14 +29,12 @@ def input_prompt():
 
 
 def list_of_questions():
-    global score
     quiz_questions = [
         ["What MLB team has the record for most runs in a game(modern era)?", "Texas Rangers"],
         ["What is the most popular sport in the world?", "Soccer"],
         ["When were the San Jose Sharks formed?", "1991"],
         ["Did the Houston Astros win the World Series in 2017?", "Yes"],
         ["What NHL team does Connor McDavid currently play for?", "Edmonton Oilers"]
-
     ]
 
     random.shuffle(quiz_questions)
