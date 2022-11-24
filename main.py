@@ -42,7 +42,8 @@ def list_of_questions():
         "When were the San Jose Sharks formed?",
         "Which of these years did the Houston Astros win the World Series?",
         "How many Super Bowls have the Texans won?",
-        "What NHL team does Connor McDavid currently play for?"
+        "What NHL team does Connor McDavid currently play for?",
+        "How often is the World Cup held?"
     ]
 
     random.shuffle(questions)
@@ -85,6 +86,18 @@ def list_of_questions():
             multiple_choices("San Jose Sharks", "Florida Panthers", "Edmonton Oilers", "Huston Nachos")
             choice = input_prompt()
             sports_trivia_question_format(choice, 3)
+            del questions[0]
+        elif questions[0] == "What NHL team does Connor McDavid currently play for?":
+            print(questions[0])
+            multiple_choices("San Jose Sharks", "Florida Panthers", "Edmonton Oilers", "Huston Nachos")
+            choice = input_prompt()
+            sports_trivia_question_format(choice, 3)
+            del questions[0]
+        elif questions[0] == "How often is the World Cup held?":
+            print(questions[0])
+            multiple_choices("Every two years", "Every four years", "Every three years", "Every five years")
+            choice = input_prompt()
+            sports_trivia_question_format(choice, 2Logan)
             del questions[0]
 
 
