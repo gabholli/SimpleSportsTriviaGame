@@ -28,9 +28,9 @@ def list_of_questions():
     quiz_questions = [
         ["What MLB team has the record for most runs in a game(modern era)?", "Texas Rangers"],
         ["What is the most popular sport in the world?", "Soccer"],
-        ["What year were the San Jose Sharks formed?", "1991"],
+        ["In what year were the San Jose Sharks formed?", "1991"],
         ["Did the Houston Astros win the World Series in 2017?", "Yes"],
-        ["What NHL team does Connor McDavid currently play for in 2022?", "Edmonton Oilers"]
+        ["What NHL team does Connor McDavid play for in the 2022-2023 season?", "Edmonton Oilers"]
     ]
 
     random.shuffle(quiz_questions)
