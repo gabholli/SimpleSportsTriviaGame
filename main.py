@@ -25,9 +25,8 @@ def input_prompt():
 
 
 def list_of_questions():
-    # In each element in this matrix, the second sub-elements represent answers to each question. These
-    # are lowercase to allow for either an uppercase or lowercase answer from the input function to match
-    # what is in the matrix.
+    # For each element in this matrix, the second sub-element represents the answer for each question. These
+    # are lowercase to allow for either an uppercase or lowercase answer from the input function.
     quiz_questions = [
         ["What MLB team has the record for most runs in a game(modern era)?", "texas rangers"],
         ["What is the most popular sport in the world?", "soccer"],
