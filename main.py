@@ -8,7 +8,7 @@ def sports_trivia_question_format(guess, answer):
     is_guessing = True
     while is_guessing:
         if guess == answer:
-            print("Correct Answer")
+            print("Correct Answer!")
             score += 1
             is_guessing = False
         else:
@@ -31,7 +31,10 @@ def list_of_questions():
         ["In what year were the San Jose Sharks formed?", "1991"],
         ["Did the Houston Astros win the World Series in 2017?", "Yes"],
         ["What NHL team does Connor McDavid play for in the 2022-2023 season?", "Edmonton Oilers"],
-        ["What year was the Chase Center of the Golden State Warriors opened?", "2019"]
+        ["What year was the Chase Center of the Golden State Warriors opened?", "2019"],
+        ["How many NHL teams get to go to the playoffs in 2023?", "16"],
+        ["Are the Houston Nachos a real football team?", "No"],
+        ["What is the most popular sport in Canada?", "Hockey"]
     ]
 
     random.shuffle(quiz_questions)
