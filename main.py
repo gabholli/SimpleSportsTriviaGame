@@ -20,21 +20,24 @@ def sports_trivia_question_format(guess, answer):
 
 
 def input_prompt():
-    answer = input("Please type your answer: ")
+    answer = input("Please type your answer: ").lower()
     return answer
 
 
 def list_of_questions():
+    # In each element in this matrix, the second sub-elements represent answers to each question. These
+    # are lowercase to allow for either an uppercase or lowercase answer from the input function to match
+    # what is in the matrix.
     quiz_questions = [
-        ["What MLB team has the record for most runs in a game(modern era)?", "Texas Rangers"],
-        ["What is the most popular sport in the world?", "Soccer"],
+        ["What MLB team has the record for most runs in a game(modern era)?", "texas rangers"],
+        ["What is the most popular sport in the world?", "soccer"],
         ["In what year were the San Jose Sharks formed?", "1991"],
-        ["Did the Houston Astros win the World Series in 2017?", "Yes"],
-        ["What NHL team does Connor McDavid play for in the 2022-2023 season?", "Edmonton Oilers"],
+        ["Did the Houston Astros win the World Series in 2017?", "yes"],
+        ["What NHL team does Connor McDavid play for in the 2022-2023 season?", "edmonton oilers"],
         ["What year was the Chase Center of the Golden State Warriors opened?", "2019"],
         ["How many NHL teams get to go to the playoffs in 2023?", "16"],
-        ["Are the Houston Nachos a real football team?", "No"],
-        ["What is the most popular sport in Canada?", "Hockey"]
+        ["Are the Houston Nachos a real football team?", "no"],
+        ["What is the most popular sport in Canada?", "hockey"]
     ]
 
     random.shuffle(quiz_questions)
