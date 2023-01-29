@@ -37,7 +37,8 @@ def list_of_questions():
         ["How many NHL teams get to go to the playoffs in 2023?", "16"],
         ["Are the Houston Nachos a real football team?", "no"],
         ["What is the most popular sport in Canada?", "hockey"],
-        ["What is the only NFL team to have a perfect season?", "miami dolphins"]
+        ["What is the only NFL team to have a perfect season?", "miami dolphins"],
+        ["What sport did Michael Jordan play?", "basketball"]
     ]
 
     random.shuffle(quiz_questions)
