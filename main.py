@@ -2,7 +2,7 @@ import random
 
 import database
 
-
+# This function takes in a user-generated guess and compares that to the given answer of the current question
 def sports_trivia_question_format(guess, answer):
     global score
     is_guessing = True
@@ -18,7 +18,7 @@ def sports_trivia_question_format(guess, answer):
     print("Your score currently is: " + str(score))
     print("")
 
-
+# This function prints out a prompt for an answer and returns that answer
 def input_prompt():
     answer = input("Please type your answer: ").lower()
     return answer
@@ -26,7 +26,7 @@ def input_prompt():
 
 def list_of_questions():
     # For each element in this matrix, the second sub-element represents the answer for each question. These
-    # are lowercase to allow for either an uppercase or lowercase answer from the input function.
+    # are lowercase to allow for either an uppercase or lowercase answer from the input function
     quiz_questions = [
         ["What MLB team has the record for most runs in a game(modern era)?", "texas rangers"],
         ["What is the most popular sport in the world?", "soccer"],
@@ -48,7 +48,7 @@ def list_of_questions():
         choice = input_prompt()
         sports_trivia_question_format(choice, quiz_questions[i][1])
 
-
+# This function prompts the user regarding playing again after the game runs completely
 def replay_prompt():
     yes_answer = "Y"
     no_answer = "N"
@@ -64,7 +64,7 @@ def replay_prompt():
             print("")
             continue
 
-
+# This function contains calls to all the other functions required to run the program
 def run_quiz():
     global score
     while True:
