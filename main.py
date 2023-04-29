@@ -2,6 +2,7 @@ import random
 
 import database
 
+
 # This function takes in a user-generated guess and compares that to the given answer of the current question
 def sports_trivia_question_format(guess, answer):
     global score
@@ -17,6 +18,7 @@ def sports_trivia_question_format(guess, answer):
     print("")
     print("Your score currently is: " + str(score))
     print("")
+
 
 # This function prints out a prompt for an answer and returns that answer
 def input_prompt():
@@ -48,6 +50,7 @@ def list_of_questions():
         choice = input_prompt()
         sports_trivia_question_format(choice, quiz_questions[i][1])
 
+
 # This function prompts the user regarding playing again after the game runs completely
 def replay_prompt():
     yes_answer = "Y"
@@ -63,6 +66,7 @@ def replay_prompt():
             print("Please make a valid entry")
             print("")
             continue
+
 
 # This function contains calls to all the other functions required to run the program
 def run_quiz():
