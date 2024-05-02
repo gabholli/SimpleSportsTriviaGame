@@ -18,4 +18,4 @@ the pertaining console.
 Gabe Hollifield
 
 ## License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the BSD 2-Clause "Simplified" License - see the LICENSE.txt file for details
